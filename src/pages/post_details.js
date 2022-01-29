@@ -69,7 +69,7 @@ function Post_details() {
     </ImageList>
 
     //keep paragraphs
-    var formatText = post.text && post.text.split('\n').map((text, index) => <p key={ index }>
+    var formatText = post.text && post.text.split('\n').map((text, index) => <p style={{ wordWrap: "break-word"}} key={ index }>
         {text}
     </p>
     );
