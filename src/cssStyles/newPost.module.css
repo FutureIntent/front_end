@@ -1,0 +1,17 @@
+
+.textarea {
+    max-width: 99%;
+    min-width: 99%;
+    color: white;
+    background-color: #212121;
+    border-color: #880e4f;
+    border-radius: 1%;
+}
+
+.textarea::placeholder {
+color: white;
+}
+
+.label {
+color: white;
+}
