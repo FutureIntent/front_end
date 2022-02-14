@@ -56,9 +56,9 @@ function Post_details() {
 
     const materialImages = post.PostImages && <ImageList sx={{ width: '100%' }} cols={2}>
         {post.PostImages.map((item) => (
-            <a key={ item.name } href={`http://localhost:3001/post_images/${item.name}`} >
+            <a key={item.name} href={`http://localhost:3001/post_images/${item.name}`} >
                 <ImageListItem key={item.name}>
-                <img
+                    <img style={{ height: '300px', objectFit: 'contain'}}
                     src={`http://localhost:3001/post_images/${item.name}`}
                     alt={item.name}
                     loading="lazy"
@@ -69,7 +69,7 @@ function Post_details() {
     </ImageList>
 
     //keep paragraphs
-    var formatText = post.text && post.text.split('\n').map((text, index) => <p key={ index }>
+    var formatText = post.text && post.text.split('\n').map((text, index) => <p key={index} style={{ wordBreak: 'break-word'}}>
         {text}
     </p>
     );
@@ -78,7 +78,7 @@ function Post_details() {
         <Typography variant="h1" component="div" sx={{ color: 'white', textAlign: 'center' }} gutterBottom>{post.theme}</Typography>
         <Typography component="div" sx={{ color: 'white',textAlign: 'right' }}>{post.createdAt && simplifyDate(post.createdAt)}</Typography>
         <Divider  sx={{ borderColor: 'white' }} />
-        <Typography component="div" sx={{ color: 'white', textAlign: 'left', marginTop: '2%' }}>{formatText}</Typography>
+        <Typography component="div" sx={{ color: 'white', textAlign: 'left', marginTop: '2%'}}>{formatText}</Typography>
         { materialImages }
     </Box>
 
