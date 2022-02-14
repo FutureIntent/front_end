@@ -105,7 +105,7 @@ function Home() {
             <CardActionArea>
                 <Link to={`post/${post.id}`} style={{ textDecoration: 'none', color: "inherit" }}>
                     {post.PostImages.length > 0 ? <CardMedia
-                        sx={{ objectFit: 'fill'}}
+                    sx={{ objectFit: 'fill'}}
                     component="img"
                     height="250"
                     image={`http://localhost:3001/post_images/${post.PostImages[0].name}`}
